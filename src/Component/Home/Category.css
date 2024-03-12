@@ -1,0 +1,16 @@
+.card{
+    display: grid;
+    background: #fff;;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8%;
+    padding: 5%;
+    margin:6% 0%;
+    
+}
+@media screen and (max-width: 1100px){
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8%;
+    }
+}

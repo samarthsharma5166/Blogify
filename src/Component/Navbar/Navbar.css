@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.nav>.img{
+    height: 60px;
+    cursor: pointer;
+    padding: 10px 15px;
+    box-shadow: -7px -7px 17px #ffffff,7px 7px 17px rgba(70, 70, 70, 0.15);
+    border: 1px solid #f7f7f7;
+    border-radius: 10px;
+}
+ol > a{
+    text-decoration: none;
+}
+.nav{
+    width: 100%;
+    display: flex;
+    background: #ffffff;
+    justify-content: space-between;
+    padding: 20px 50px;
+    border: 1px solid #f7f7f7;
+    box-shadow: -7px -7px 17px #fff,7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+ol{
+    display: flex;
+    margin: auto 0;
+    list-style: none;
+}
+ol .item{
+    margin: 0 10px;
+    color: #2f343b;
+    letter-spacing: 3px;
+    padding: 8px 12px;
+    border: 1px solid #f7f7f7;
+    box-shadow: -7px -7px 17px #fff,7px 7px 17px rgba(70, 70, 70, 0.15);
+    border-radius: 10px;
+}
+ol .item:hover{
+    color: #fff;
+    background: #E2701B;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.bar{
+    position: relative;
+    display: none;
+}
+.bar span{
+    height: 65px;
+    width: 65px;
+    line-height: 65px;
+    font-size: 35px;
+    text-align: center;
+    border: 1px solid #f7f7f7;
+    border-radius: 10px;
+    box-shadow: -7px -7px 17px #fff,7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+#FaBars{
+    text-align: center;
+    padding: 0px 10px;
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 1100px) {
+    
+    nav{
+        display: block;
+    }
+    nav img{
+        display: inline-block;
+        margin: 20px 40px;
+    }
+    ol{
+        display: block;
+        width: 100%;
+    }
+    ol .item{
+        position: relative;
+        margin: 40px 0;
+        width: 90%;
+        text-align: center;
+        padding: 30px;
+        font-size: 28px;
+        display: block;
+        border-radius: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        /* position: relative; */
+        display: none;
+    }
+    .bar{
+        display: block;
+        position: absolute;
+        top: 37px;
+        right: 80px;
+        cursor: pointer;
+    }
+    .bar #FaTimes{
+        display: none;
+    }
+    #check:checked~nav ol li{
+        display: block;
+    }
+    #check:checked~nav .bar #FaTimes{
+        display: block;
+    }
+    #check:checked~nav .bar #FaBars{
+        display: none;
+    }
+}
